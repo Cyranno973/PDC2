@@ -208,7 +208,7 @@ function createNotification(chaine, color) {
 		notif.remove();
 		delete notif;
 
-	}, 20000);
+	}, 3000);
 
 
 }
@@ -238,8 +238,8 @@ window.onclick = function(event) {
   }
 }
 
-// if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker
-//         .register("/pdc/sw.js")
-//         .then(() => console.log("registered service worker!"));
-// }
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+        .register("/pdc/sw.js")
+        .then(() => console.log("registered service worker!"));
+}
