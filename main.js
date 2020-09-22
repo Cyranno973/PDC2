@@ -13,7 +13,13 @@ let recuperationSumPax = sessionStorage.getItem("myDictPax");
 
 const pax = document.getElementById('pax');
 const bebe = document.getElementById('bebes');
+const supprimez = document.getElementById('supprimez');
+const annuler = document.getElementById('annuler');
 const containerNotif = document.getElementById('containerNotif');
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+var closeBtn = document.getElementById("closeBtn");
+
 
 const pdc = document.querySelector('.pdc');
 
@@ -61,8 +67,9 @@ for (const element of list) {
 	})
 }
 
-pdc.addEventListener('click', reset);
-
+pdc.addEventListener('click', confirmation);
+supprimez.addEventListener('click', reset);
+annuler.addEventListener('click', closeModal);
 
 
 function editionPax(nameId) {
@@ -193,6 +200,7 @@ function reset() {
 	myDictBebe = {};
 	totalPax = 0;
 	totalBebe = 0;
+	closeModal();
 	createNotification('Remise à zéro', ' #2D882D');
 };
 
@@ -212,31 +220,27 @@ function createNotification(chaine, color) {
 
 
 }
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-var closeBtn = document.getElementById("closeBtn");
+function closeModal() {
+	modal.style.display = "none";
+  }
 
 // When the user clicks on the button, open the modal 
 //with function anonyme
-pdc.addEventListener('click', function() {
-  modal.style.display = "block";
-})
+function confirmation() {
+	modal.style.display = "block";
+	// When the user clicks on <span> (x), close the modal
+	// with function with name
+	closeBtn.addEventListener('click', closeModal)
 
-// When the user clicks on <span> (x), close the modal
-// with function with name
-closeBtn.addEventListener('click', closeModal)
-function closeModal() {
-  modal.style.display = "none";
+	
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	}
 }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 if ("serviceWorker" in navigator) {
     navigator.serviceWorker
