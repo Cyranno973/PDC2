@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato&family=Roboto&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  height: 100vh;
+  background-color: rgb(243, 238, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'sans-serif';
+}
+.container{
+  display: flex;
+  justify-content: center;
+  width: 768px;
+  border-radius: 10px;
+
+}
+.appli {
+  width: 768px;
+  height: 712px;
+  border-radius: 10px;
+  box-shadow: 39px 29px 32px 4px #463636;
+  background-color: #262626;
+}
+
+.titre {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+li{
+  list-style: none;
+  margin: 5px;
+}
+.pdc {
+  text-align: center;
+  background: #2c2c2c;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #F8F8F8;
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  width: 100%;
+  font-family: 'Roboto';
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.pdc:hover{
+  padding: 20px;
+  background-color: #2D882D;
+}
+
+.zones,.pax,.bebes {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 15px;
+  font-size: 25px;
+  justify-content:center;
+  text-align: center;
+}
+
+.colonnes{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  width: 768px;
+  background-color: #2c2c2c;
+}
+
+ul,.ob {
+  background-color: #2c2c2c;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr ;
+  font-size: 25px;
+  text-align: center;
+  width: 768px;
+  padding: 15px;
+  font-family: 'Gloria Halleluja';
+  font-weight: 900;
+  color: #fff;
+}
+
+.oa-moins,.oa-plus,.ob-moins,.ob-plus{
+  background: #5FAE5F;
+  box-shadow: 0 3px #a8a8a8a8;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 0.3s ; 
+}
+
+.oa-pax,.oa-moins,.oa-plus,.oa-zones,.oa-bebes,.ob-pax,.ob-moins,.ob-plus,.ob-zones,.ob-bebes{
+  padding: 15px 25px;
+}
+
+.oa-moins:hover,.oa-plus:hover,.ob-moins:hover,.ob-plus:hover{
+  background-color: #0C620C;
+}
+
+.oa-moins:active,.oa-plus:active,.ob-moins:active,.ob-plus:active{
+  box-shadow: 0 1px #a8a8a8;
+  transform: translateY(2px);
+}
+
+.colonnes-section{
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+  width: 768px;
+  background-color: #2D882D;
+}
+.colonnes-section > div{
+  color: #fff;
+}
+.container-footer{
+  color: #fff;
+  display: flex;
+  padding: 20px;
+}
+.rsc{
+  display: flex;
+  width: 50%;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+}
+.pmr{
+  display: flex;
+  width: 50%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.rsc span{
+  display: block;
+  padding: 15px ;
+}
+.pmr span{
+  display: block;
+  padding: 15px;
+}
+
+
+[contenteditable] {
+  outline: 0px solid transparent;
+}
+#containerNotif {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding-top: 15%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal-content {
+  position: relative;
+  background-color: rgb(45, 136, 45);
+  width: 80%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+  animation-name: animatetop;
+  animation-duration: 0.7s;
+  margin: auto;
+  padding: 0px;
+}
+.modal-header {
+  background-color: rgb(45, 136, 45);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 1rem;
+}
+#closeBtn {
+  color: rgb(255, 255, 255);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-body {
+  padding: 2px 16px;
+}
+.container-reponse {
+  text-align: center;
+  font-family: "Gloria Halleluja";
+  color: rgb(38, 38, 38);
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+#annuler, #supprimez {
+  font-family: "Gloria Halleluja";
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 5px;
+}
+#annuler:hover, #supprimez:hover {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 5px;
+}
+.toast{
+  padding: 2rem;
+  margin: 1rem;
+  color: #fff;
+  border-radius: 5px;
+}
