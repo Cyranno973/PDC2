@@ -1,10 +1,10 @@
-let nbrpax = 0;
 let totaux;
 let element;
 let name;
 let myDictPax = {};
 let myDictBebe = {};
 let cible;
+let nbrpax = 0;
 let totalPax = 0;
 let totalBebe = 0;
 
@@ -45,8 +45,6 @@ function total() {
 
 	pax.textContent = totalPax;
 
-
-
 	infosObjDeserializedBebe = JSON.parse(sessionStorage.getItem('myDictBebe'));
 
 	for (var keyBebe in infosObjDeserializedBebe) {
@@ -70,7 +68,6 @@ for (const element of list) {
 pdc.addEventListener('click', confirmation);
 supprimez.addEventListener('click', reset);
 annuler.addEventListener('click', closeModal);
-
 
 function editionPax(nameId) {
 	var reg = new RegExp('^[0-9]+$');
@@ -135,7 +132,27 @@ if (recuperationSumPax === null && recuperationSumBebe === null) {
 	for (let editELt of editPaxEditbebe) {
 		editELt.textContent = 0;
 		pax.textContent = 0;
-		bebe.textContent = 0;
+		bebe.textContent = 0;	
+	}
+	
+	for (let elementPax of editPax){
+		var infosObjSerializedPax;
+		var infosObjSerializedBebe;
+
+	ciblePax = elementPax;
+	cibleBebe = elementPax.nextElementSibling;
+
+	console.log(cibleBebe);
+	myDictPax[ciblePax.classList[0]] = ciblePax.textContent;
+	infosObjSerializedPax = JSON.stringify(myDictPax);
+	sessionStorage.setItem('myDictPax', infosObjSerializedPax);
+
+	myDictBebe[cibleBebe.classList[0]] = cibleBebe.textContent;
+	infosObjSerializedBebe = JSON.stringify(myDictBebe);
+	sessionStorage.setItem('myDictBebe', infosObjSerializedBebe);
+
+
+
 	}
 }
 else {
@@ -178,6 +195,7 @@ function increment(nameId) {
 	myDictPax[cible.classList[0]] = cible.textContent;
 	infosObjSerializedPax = JSON.stringify(myDictPax);
 	sessionStorage.setItem('myDictPax', infosObjSerializedPax);
+
 	infosObjDeserializedPax = JSON.parse(sessionStorage.getItem('myDictPax'));
 	cible.textContent = Number(infosObjDeserializedPax[cible.classList[0]]) + 1;
 	myDictPax[cible.classList[0]] = cible.textContent;
@@ -242,8 +260,27 @@ function confirmation() {
 }
 
 
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-        .register("/pdc/sw.js")
-        .then(() => console.log("registered service worker!"));
+// if ("serviceWorker" in navigator) {
+//     navigator.serviceWorker
+//         .register("/pdc/sw.js")
+//         .then(() => console.log("registered service worker!"));
+// }
+
+
+
+
+document.addEventListener("keydown", function(event) {
+	let el = document.querySelector( ':focus' );
+	if (event.which === 13) {
+		el.blur();
+
+
 }
+
+  })
+/*function delEspace(string) {
+
+	string = texteOrigine.split(" ").join(""); 
+	
+}
+*/
