@@ -266,13 +266,10 @@ function confirmation() {
         .then(() => console.log("registered service worker!"));
  }
 
-
 document.addEventListener("keydown", function(event) {
 	let el = document.querySelector( ':focus' );
 	if (event.which === 13) {
 		el.blur();
-
-
 }
 
   })
