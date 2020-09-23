@@ -260,13 +260,11 @@ function confirmation() {
 }
 
 
-// if ("serviceWorker" in navigator) {
-//     navigator.serviceWorker
-//         .register("/pdc/sw.js")
-//         .then(() => console.log("registered service worker!"));
-// }
-
-
+ if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+       .register("/pdc/sw.js")
+        .then(() => console.log("registered service worker!"));
+ }
 
 
 document.addEventListener("keydown", function(event) {
@@ -278,9 +276,4 @@ document.addEventListener("keydown", function(event) {
 }
 
   })
-/*function delEspace(string) {
 
-	string = texteOrigine.split(" ").join(""); 
-	
-}
-*/
