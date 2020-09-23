@@ -1,93 +1,100 @@
 <!DOCTYPE html>
-<html lang='fr'>
-
-<head>
-    <meta charset='UTF-8'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
-    <link rel="manifest" href="manifest.webmanifest">
-    <meta name="theme-color" content="#1976d2">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'>
-    <link rel='stylesheet' href='style.css'>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#1976d2" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Apli</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div id="containerNotif">
+      <div id="containerNotif"></div>
+      <div class="appli">
+        <div class="titre">
+          <div class="pdc"><span>PDC</span></div>
+          <div class="colonnes">
+            <div class=""></div>
+            <div class="zones">ZONES</div>
+            <div class="pax">NBRE DE PAX</div>
+            <div class="bebes">BEBES</div>
+            <div class=""></div>
+          </div>
         </div>
-        <div class='appli'>
-            <div class='titre'>
-                <div class='pdc'><span>PDC</span></div>
-                <div class='colonnes'>
-                    <div class=''></div>
-                    <div class='zones'>ZONES </div>
-                    <div class='pax'>NBRE DE PAX </div>
-                    <div class='bebes'>BEBES </div>
-                    <div class=''></div>
-                </div>
-            </div>
-            <ul id="oa">
-                <li class='oa-moins moins'>-</li>
-                <li class='oa-zones'>OA </li>
-                <li class='oa-pax editPax' contenteditable="true"></li>
-                <li class='oa-bebes editBebe' contenteditable="true">1 </li>
-                <li class='oa-plus plus '>+</li>
-                <li class='ob-moins  moins'>-</li>
-                <li class='ob-zones'>OB </li>
-                <li class='ob-pax editPax' contenteditable="true"></li>
-                <li class='ob-bebes editBebe' contenteditable="true">1 </li>
-                <li class='ob-plus plus'>+</li>
-                <li class='oc-moins  moins'>-</li>
-                <li class='oc-zones'>OC </li>
-                <li class='oc-pax editPax' contenteditable="true"></li>
-                <li class='oc-bebes editBebe' contenteditable="true">1 </li>
-                <li class='oc-plus plus'>+</li>
-                <li class='od-moins  moins'>-</li>
-                <li class='od-zones'>OD </li>
-                <li class='od-pax editPax' contenteditable="true"></li>
-                <li class='od-bebes editBebe' contenteditable="true">1 </li>
-                <li class='od-plus plus'>+</li>
-            </ul>
-            <div class='section'>
-                <div class='colonnes-section'>
-                    <div class=''></div>
-                    <div class='zones'>TOTAL </div>
-                    <div id='pax'>1 </div>
-                    <div id='bebes'>0 </div>
-                    <div class=''></div>
-                </div>
-            </div>
-            <footer>
-                <div class="container-footer">
-                    <div class="pmr"><span>10</span> PMR</div>
-                    <div class="rsc">
-                        <div class="r"><span>R</span> <span class="ndr color">2</span></div>
-                        <div class="s"><span>S</span> <span class="ndr color">2</span></div>
-                        <div class="c"><span>C</span> <span class="ndr color">2</span></div>
-                    </div>
-                </div>
-            </footer>
+        <ul id="oa">
+          <li class="oa-moins moins">-</li>
+          <li class="oa-zones">OA</li>
+          <li class="oa-pax editPax" contenteditable="true"></li>
+          <li class="oa-bebes editBebe" contenteditable="true"></li>
+          <li class="oa-plus plus">+</li>
+          <li class="ob-moins moins">-</li>
+          <li class="ob-zones">OB</li>
+          <li class="ob-pax editPax" contenteditable="true"></li>
+          <li class="ob-bebes editBebe" contenteditable="true"></li>
+          <li class="ob-plus plus">+</li>
+          <li class="oc-moins moins">-</li>
+          <li class="oc-zones">OC</li>
+          <li class="oc-pax editPax" contenteditable="true"></li>
+          <li class="oc-bebes editBebe" contenteditable="true"></li>
+          <li class="oc-plus plus">+</li>
+          <li class="od-moins moins">-</li>
+          <li class="od-zones">OD</li>
+          <li class="od-pax editPax" contenteditable="true"></li>
+          <li class="od-bebes editBebe" contenteditable="true"></li>
+          <li class="od-plus plus">+</li>
+        </ul>
+        <div class="section">
+          <div class="colonnes-section">
+            <div class=""></div>
+            <div class="zones">TOTAL</div>
+            <div id="pax">1</div>
+            <div id="bebes">0</div>
+            <div class=""></div>
+          </div>
         </div>
+        <footer>
+          <div class="container-footer">
+            <div class="pmr"><span>10</span> PMR</div>
+            <div class="rsc">
+              <div class="r">
+                <span>R</span> <span class="ndr color">2</span>
+              </div>
+              <div class="s">
+                <span>S</span> <span class="ndr color">2</span>
+              </div>
+              <div class="c">
+                <span>C</span> <span class="ndr color">2</span>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
     <div id="myModal" class="modal">
-		<div class="modal-content">
-			<div class="modal-header">
-				<span id="closeBtn">&times;</span>
-				<h2>Voulez vous supprimez toute vos données? </h2>
-			</div>
-			<div class="modal-body">
-                <div class="container-reponse">
-                    <div id="annuler">Annuler</div>
-                    <div id="supprimez">Supprimez</div>
-                </div>
-			</div>
-			
-		</div>
-	</div>
-    <script src='main.js'></script>
-    <script src='sw.js'></script>
-
-</body>
-
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="closeBtn">&times;</span>
+          <h2>Voulez vous supprimez toute vos données?</h2>
+        </div>
+        <div class="modal-body">
+          <div class="container-reponse">
+            <div id="annuler">Annuler</div>
+            <div id="supprimez">Supprimez</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="sw.js"></script>
+  </body>
 </html>
