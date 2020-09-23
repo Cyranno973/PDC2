@@ -64,7 +64,7 @@ function total() {
     // console.log('total bebe  : '+totalBebe);
   }
 
-  bebe.textContent = totalBebe;
+  pm.textContent = totalRsc;
 }
 
 for (const element of list) {
