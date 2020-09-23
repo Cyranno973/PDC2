@@ -142,7 +142,6 @@ if (recuperationSumPax === null && recuperationSumBebe === null) {
 	ciblePax = elementPax;
 	cibleBebe = elementPax.nextElementSibling;
 
-	console.log(cibleBebe);
 	myDictPax[ciblePax.classList[0]] = ciblePax.textContent;
 	infosObjSerializedPax = JSON.stringify(myDictPax);
 	sessionStorage.setItem('myDictPax', infosObjSerializedPax);
@@ -175,6 +174,7 @@ else {
 	total();
 }
 
+
 function decrement(nameId) {
 	var infosObjDeserializedPax;
 	cible = nameId.nextElementSibling.nextElementSibling;
@@ -182,7 +182,8 @@ function decrement(nameId) {
 	infosObjSerializedPax = JSON.stringify(myDictPax);
 	sessionStorage.setItem('myDictPax', infosObjSerializedPax);
 	infosObjDeserializedPax = JSON.parse(sessionStorage.getItem('myDictPax'));
-	cible.textContent = infosObjDeserializedPax[cible.classList[0]] - 1;
+	if(infosObjDeserializedPax[cible.classList[0]] - 1 >= 0)cible.textContent = infosObjDeserializedPax[cible.classList[0]] - 1;
+
 	myDictPax[cible.classList[0]] = cible.textContent;
 	infosObjSerializedPax = JSON.stringify(myDictPax);
 	sessionStorage.setItem('myDictPax', infosObjSerializedPax);

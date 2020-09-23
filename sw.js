@@ -4,7 +4,7 @@ const assets = [
     "/pdc/style.css",
     "/pdc/index.html",
     "/pdc/main.js",
-    "/assets/fonts/Roboto-Medium.ttf",
+    "/pdc/assets/fonts/Roboto-Medium.ttf",
     "/pdc/"
 ];
 
