@@ -84,6 +84,9 @@ for (const rscElt of allRsc) {
 function editionRsc(nameId) {
   var reg = new RegExp("^[0-9]+$");
 
+  selectElementContents(nameId);
+
+
   addEventListener("focusout", function () {
     cible = nameId;
     myDictRsc[cible.classList[0]] = cible.textContent;
@@ -116,6 +119,9 @@ annuler.addEventListener("click", closeModal);
 
 function editionPax(nameId) {
   var reg = new RegExp("^[0-9]+$");
+  
+  selectElementContents(nameId);
+
 
   addEventListener("focusout", function () {
     cible = nameId;
@@ -144,6 +150,8 @@ function editionPax(nameId) {
 
 function editionBebe(nameId) {
   var reg = new RegExp("^[0-9]+$");
+
+  selectElementContents(nameId);
 
   addEventListener("focusout", function () {
     cible = nameId;
@@ -333,3 +341,11 @@ document.addEventListener("keydown", function (event) {
     el.blur();
   }
 });
+function selectElementContents(el) {
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
+

@@ -1,7 +1,18 @@
-@font-face {
+/* @font-face {
   font-family: "Open Sans";
-  src: url("assets/fonts/Roboto-Regular.ttf") format("ttf");
- }
+  src: url("assets/fonts/Roboto-Regular.ttf") format("ttf"),
+       url("assets/fonts/Roboto-Light.ttf") format("ttf");
+ } */
+
+ @font-face {
+  font-family: 'Roboto';
+  src: url('assets/fonts/Roboto.eot'); /* IE9 Compat Modes */
+  src: url('assets/fonts/Roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('assets/fonts/Roboto.woff') format('woff'), /* Modern Browsers */
+  url('assets/fonts/Roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('assets/fonts/Roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -214,4 +225,22 @@ ul,.ob {
   margin: 1rem;
   color: #fff;
   border-radius: 5px;
+}
+.oc-pax{
+  -webkit-user-select: all;  /* Chrome all / Safari all */
+  -moz-user-select: all;     /* Firefox all */
+  -ms-user-select: all;      /* IE 10+ */
+  user-select: all;          /* Likely future */  
+}
+.zones{
+  position: relative;
+  
+}
+.zones span{
+  position: absolute;
+  font-size: 12px;
+  bottom: 0;
+  font-family: 'Roboto';
+  font-weight: 300;
+ 
 }
