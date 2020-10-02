@@ -14,7 +14,7 @@ let recuperationSumPax = sessionStorage.getItem("myDictPax");
 
 const pax = document.getElementById("pax");
 const bebe = document.getElementById("bebes");
-const supprimez = document.getElementById("supprimez");
+const supprimer = document.getElementById("supprimer");
 const annuler = document.getElementById("annuler");
 const containerNotif = document.getElementById("containerNotif");
 var modal = document.getElementById("myModal");
@@ -112,7 +112,7 @@ function editionRsc(nameId) {
 }
 
 pdc.addEventListener("click", confirmation);
-supprimez.addEventListener("click", reset);
+supprimer.addEventListener("click", reset);
 annuler.addEventListener("click", closeModal);
 
 
@@ -294,7 +294,7 @@ function reset() {
   totalPax = 0;
   totalBebe = 0;
   closeModal();
-  createNotification("Remise à zéro", " #2D882D");
+  createNotification("Données Supprimer", " #2D882D");
 }
 
 function createNotification(chaine, color) {

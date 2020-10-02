@@ -14,85 +14,146 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Apli</title>
+    <title>Deroutement</title>
   </head>
 
   <body>
     <div class="container">
-      <div id="containerNotif"></div>
-      <div class="appli">
-        <div class="titre">
-          <div class="pdc"><span>PDC</span></div>
-          <div class="colonnes">
-            <div class=""></div>
-            <div class="zones ">zones </div>
-            <div class="pax">NBRE DE PAX</div>
-            <div class="bebes">BEBES</div>
-            <div class=""></div>
+      <div class="container-deroutement">
+        <h1>Deroutement</h1>
+        <div class="container-colonnes">
+        <div class="div-colonnes-1">
+          <ul>
+            <li>
+              <label for="distance">distance</label>
+              <input type="text" name="distance" id="distance">
+            </li>
+            <li>
+              <label for="distance">rm</label>
+              <input type="text" name="rm" id="rm">
+            </li>
+            <li>
+              <label for="distance">vx</label>
+              <input type="text" name="vx" id="vx">
+            </li>
+            <li>
+              <label for="distance">vw</label>
+              <input type="text" name="vw" id="vw">
+            </li>
+            <li>
+              <label for="distance">fob</label>
+              <input type="text" name="fob" id="fob">
+            </li>
+          </ul>
+        </div>
+        <div class="div-colonnes-2">
+          <ul>
+            <li>
+              <label for="distance">cm</label>
+              <input type="text" name="cm" id="cm"></li>
+            <li>
+              <label for="distance">vs</label>
+              <input type="text" name="vs" id="vs"></li>
+            <li>
+              <label for="distance">tav</label>
+              <input type="text" name="tav" id="tav"></li>
+            <li>
+              <label for="distance">efuel</label>
+              <input type="text" name="efuel" id="efuel"></li>
+          </ul>
+        </div>
+        <div class="div-colonnes-3">
+          <div class="one">
+          <ul>
+            
+           <li>
+             <div class="div-text">A</div>
+           </li>
+           <li>
+             <div class="div-text">Xm</div>
+           </li>
+           <li>
+             <div class="div-text">D</div>
+           </li>
+           <li>
+             <div class="div-text">Ve</div>
+           </li>
+           <li>
+             <div class="div-text">Vt</div>
+           </li>
+           <li>
+             <div class="div-text">Vp</div>
+           </li>
+           <li>
+             <div class="div-text">FB1</div>
+           </li>
+           <li>
+             <div class="div-text">FB2</div>
+           </li>
+           <li>
+             <div class="div-text">TSV</div>
+           </li>
+           <li>
+             <div class="div-text">Conso L/h</div>
+           </li>
+           <li>
+             <div class="div-text">Conso L/min</div>
+           </li>
+           <li>
+             <div class="div-text">TSV</div>
+           </li>
+          </ul>
+
+          </div>
+          <div class="two">
+          <ul>
+            <li>
+              <div class="div-text"><span>000</span><span>°</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>000</span><span>°</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>000</span><span>°</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>00</span><span> kts</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>00</span><span> kts</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>00</span><span> kts</span> </div>
+            </li>
+            
+            <li>
+              <div class="div-text">00</div>
+            </li>
+            <li>
+              <div class="div-text">00</div>
+            </li>
+            <li>
+              <div class="div-text"><span>0:00</span><span> min</span> </div>
+
+            </li>
+            <li>
+              <div class="div-text"><span>00</span><span> L</span> </div>
+
+            </li>
+            <li>
+              <div class="div-text"><span>0,33</span><span> L</span> </div>
+            </li>
+            <li>
+              <div class="div-text"><span>0:00</span><span>min</span> </div>
+            </li>
+             
+           
+          </ul>
           </div>
         </div>
-        <ul id="oa">
-        <li class="oa-moins moins">-</li>
-          <li class="oa-zones zones">OA <span>Rangée 1-7</span></li>
-          <li class="oa-pax editPax" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="oa-bebes editBebe" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="oa-plus plus">+</li>
-          <li class="ob-moins moins">-</li>
-          <li class="ob-zones zones">OB <span>Rangée 8-16</span></li>
-          <li class="ob-pax editPax" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="ob-bebes editBebe" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="ob-plus plus">+</li>
-          <li class="oc-moins moins">-</li>
-          <li class="oc-zones zones">OC <span>Rangée 17-25</span></li>
-          <li class="oc-pax editPax" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="oc-bebes editBebe" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="oc-plus plus">+</li>
-          <li class="od-moins moins">-</li>
-          <li class="od-zones zones">OD <span>Rangée 26-32</span></li>
-          <li class="od-pax editPax" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="od-bebes editBebe" type="number" inputmode="numeric" pattern="\d*" contenteditable="true"></li>
-          <li class="od-plus plus">+</li>
-        </ul>
-        <div class="section">
-          <div class="colonnes-section">
-            <div class=""></div>
-            <div class="zones zones">TOTAL</div>
-            <div id="pax">1</div>
-            <div id="bebes">0</div>
-            <div class=""></div>
-          </div>
         </div>
-        <footer>
-          <div class="container-footer">
-            <div class="pmr"><span class="pm">10</span> PMR</div>
-            <div class="rsc">
-              <div id="r" >
-                <span>R</span> <span type="number" inputmode="numeric" pattern="\d*" contenteditable="true" class="r allRsc ndr color"></span>
-              </div>
-              <div id="s">
-                <span>S</span> <span type="number" inputmode="numeric" pattern="\d*" contenteditable="true" class="s allRsc ndr color"></span>
-              </div>
-              <div id="c" >
-                <span>C</span> <span type="number" inputmode="numeric" pattern="\d*" contenteditable="true" class="c allRsc ndr color"></span>
-              </div>
-            </div>
-          </div>
-        </footer>
       </div>
     </div>
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-header">
-          <span id="closeBtn">&times;</span>
-          <h2>Voulez vous supprimez toute vos données?</h2>
-        </div>
-        <div class="modal-body">
-          <div class="container-reponse">
-            <div id="annuler">Annuler</div>
-            <div id="supprimez">Supprimez</div>
-          </div>
-        </div>
-      </div>
     </div>
     <script src="main.js"></script>
     <script src="sw.js"></script>
