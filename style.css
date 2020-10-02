@@ -24,7 +24,6 @@ body {
   background-color: #bdd4e7;
   background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);
   font-family: 'Roboto';
-  height: 100vh;
 }
 
 body .container-deroutement {
@@ -49,6 +48,7 @@ body h1 {
   border: 10px solid #1C486D;
   width: 100%;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 body .div-colonnes-1 {
@@ -64,6 +64,12 @@ body .div-colonnes-1 input {
   border-radius: 15px;
   border: none;
   padding: 10px 5px;
+}
+
+body .div-colonnes-1 input[type='number'] {
+  text-align: center;
+  color: white;
+  font-size: 18px;
 }
 
 body .container-colonnes {
@@ -104,6 +110,13 @@ body label {
   padding: 10px 5px;
   border-radius: 15px;
   background-color: transparent;
+}
+
+.div-colonnes-2 input[type='number'] {
+  text-align: center;
+  color: #121849;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .div-colonnes-3 {

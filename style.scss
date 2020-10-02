@@ -31,7 +31,7 @@ input[type=email], {
     background-color: #bdd4e7;
     background-image: linear-gradient(315deg, #bdd4e7 0%, #8693ab 74%);  
     font-family: 'Roboto';
-    height: 100vh;
+    
     .container-deroutement{
     display: flex;
     justify-content: center;
@@ -44,6 +44,7 @@ input[type=email], {
       border: 10px solid #1C486D;
       width: 100%;
       border-radius: 20px;
+      margin-bottom: 30px;
     }
     .div-colonnes-1{
       display: flex;
@@ -57,6 +58,11 @@ input[type=email], {
         border: none;
         padding: 10px 5px;
       }
+      input[type='number'] {
+        text-align: center;
+        color: white;
+        font-size: 18px;
+    }
 
     }
     .container-colonnes{
@@ -86,6 +92,12 @@ input[type=email], {
       border-radius: 15px;
       background-color: transparent;
     }
+    input[type='number'] {
+      text-align: center;
+      color: #121849;
+      font-size: 18px;
+      font-weight: bold;
+  }
   }
   .div-colonnes-3{
     color:#fff;
