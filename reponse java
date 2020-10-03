@@ -1,0 +1,16 @@
+
+       /* double inHour = ticket.getInTime().getTime();
+        double outHour = ticket.getOutTime().getTime();
+        System.out.println("valeur de inHour : "+inHour);
+        System.out.println("valeur de outHour : "+outHour);
+
+
+        //TODO: Some tests are failing here. Need to check if this logic is correct
+        double duration = outHour - inHour;
+        System.out.println("valeur de durationavant  : "+duration);
+        duration = duration /1000d/60d/60d;
+
+        System.out.println("valeur de duration apres : "+duration);
+   */
+
+        Duration duration = Duration.between(ticket.getInTime().toInstant(),ticket.getOutTime().toInstant());

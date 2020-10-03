@@ -14,7 +14,7 @@ let recuperationSumPax = sessionStorage.getItem("myDictPax");
 
 const pax = document.getElementById("pax");
 const bebe = document.getElementById("bebes");
-const supprimez = document.getElementById("supprimez");
+const supprimer = document.getElementById("supprimer");
 const annuler = document.getElementById("annuler");
 const containerNotif = document.getElementById("containerNotif");
 var modal = document.getElementById("myModal");
@@ -112,7 +112,7 @@ function editionRsc(nameId) {
 }
 
 pdc.addEventListener("click", confirmation);
-supprimez.addEventListener("click", reset);
+supprimer.addEventListener("click", reset);
 annuler.addEventListener("click", closeModal);
 
 
@@ -261,17 +261,29 @@ function decrement(nameId) {
 
 function increment(nameId) {
   var infosObjDeserializedPax;
+  let limitPax;
   cible = nameId.previousElementSibling.previousElementSibling;
+  limitPax = cible.classList[0] === 'oa-pax' ?  45 : 48;
+  console.log(cible.classList[0]);
+
+
   myDictPax[cible.classList[0]] = cible.textContent;
   infosObjSerializedPax = JSON.stringify(myDictPax);
   sessionStorage.setItem("myDictPax", infosObjSerializedPax);
 
   infosObjDeserializedPax = JSON.parse(sessionStorage.getItem("myDictPax"));
+ 
+ 
+
+  if (Number(infosObjDeserializedPax[cible.classList[0]]) + 1 <= limitPax){
+  console.log('infosObjDeserializedPax:', infosObjDeserializedPax)
   cible.textContent = Number(infosObjDeserializedPax[cible.classList[0]]) + 1;
+
   myDictPax[cible.classList[0]] = cible.textContent;
   infosObjSerializedPax = JSON.stringify(myDictPax);
   sessionStorage.setItem("myDictPax", infosObjSerializedPax);
   total();
+  }
 }
 
 function reset() {
@@ -294,7 +306,7 @@ function reset() {
   totalPax = 0;
   totalBebe = 0;
   closeModal();
-  createNotification("Remise à zéro", " #2D882D");
+  createNotification("Données Supprimer", " #2D882D");
 }
 
 function createNotification(chaine, color) {
