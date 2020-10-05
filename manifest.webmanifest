@@ -1,6 +1,6 @@
 {
-  "name": "pdc",
-  "short_name": "pdc",
+  "name": "deroutement",
+  "short_name": "deroute",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",

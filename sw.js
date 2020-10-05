@@ -1,11 +1,11 @@
 let cache_name = "SimiCart"; // The string used to identify our cache
 
 const assets = [
-    "/pdc/style.css",
-    "/pdc/index.html",
-    "/pdc/main.js",
-    "/pdc/assets/fonts/Roboto-Medium.ttf",
-    "/pdc/"
+    "/deroutement/style.css",
+    "/deroutement/index.html",
+    "/deroutement/main.js",
+    "/deroutement/assets/fonts/Roboto-Medium.ttf",
+    "/deroutement/"
 ];
 
 self.addEventListener("install", event => {
@@ -24,7 +24,7 @@ self.addEventListener("install", event => {
 
 
 self.addEventListener("fetch", event => {
-    if (event.request.url === "https://cyralesson.yo.fr/pdc/") {
+    if (event.request.url === "https://cyralesson.yo.fr/deroutement/") {
 		console.log("url match");
         // or whatever your app's URL is
         event.respondWith(
